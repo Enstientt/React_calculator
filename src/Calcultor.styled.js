@@ -12,8 +12,8 @@ border: 5px;
 background-color:lightcyan;
 overflow: hidden;
 box-shadow: 10px 10px 10px grey;
-@media screen and (max-height: 700px) {
-height: 100%;
+@media screen and (max-width: 350) {
+height: 700px;
 width: 100%;
 margin-top:0px;
 }
@@ -35,7 +35,7 @@ overflow-x: hidden;
 display: grid;
 grid-template-columns: repeat(4, 1fr);
 background:linear-gradient(315deg, #485461 0%, #28313b 74%);
-@media  screen and (max-height: 700px) {
+@media  screen and (max-width:350px) {
 width: 100%;
 height: 600px;
 }
@@ -52,8 +52,8 @@ export const ButtonIn = styled.input`
     background-color: #454545;
    }
    transform: scale(1);
-   @media screen and (max-height: 700px ) {
+   @media screen and (max-width: 350px ) {
       width: calc(300px/4);
-      height: calc(500px/5);
+      height: calc(450px/5);
    }
  `
