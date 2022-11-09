@@ -4,15 +4,18 @@ import {Container, Input, Buttons, ButtonIn} from './Calcultor.styled';
 class Application extends Component{
     state = {
       input:'',
-      color:'Nada'
+      color:'Nada',
+      trigger:true
     }
     handleClick =(e) =>{
         e.preventDefault();
         let input =e.target.value;
         if (!/[ ^=|^D|^C|^%]/.test(input) && input !=='-/+')
         {
-          this.setState({input:this.state.input + input.toString(),
-          float:((/[+-/x.]/.test(input))) ? true:false
+          this.setState({input: this.state.trigger?this.state.input + input.toString():input,
+          float:((/[+-/x.]/.test(input))) ? true:false,
+          trigger:this.state.trigger?true:true,
+          color:'Nada'
           });
         }
         else if (input === 'C')
@@ -37,7 +40,8 @@ class Application extends Component{
         else
       {
         this.setState({input:eval(this.state.input).toString(),
-                       color :'#454545'});
+                       color :'#454545',
+                      trigger:false});
       }
 }
 render(){
@@ -51,9 +55,6 @@ render(){
           onClick={this.handleClick}
           name={e}
           value={e}
-          disabled={((e === '*' || e === '/' || e === '%' || e==='+' || e==='-' || e==='=') && this.state.input.length === 0)
-                      || (e === '.' && this.state.float) ||
-                      ( this.state.color !== 'Nada' &&  e !== 'C') }
           readOnly />
         )
       }
