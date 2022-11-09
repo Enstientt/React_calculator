@@ -13,6 +13,11 @@ border: 5px;
 background-color:lightcyan;
 overflow: hidden;
 box-shadow: 10px 10px 10px grey;
+@media only screen and (max-width: 600px) {
+height: 100%;
+width: 100%;
+margin-top:0px;
+}
 `;
 export const Input = styled.input`
 width: inherit;
@@ -29,9 +34,12 @@ width: 100%;
 height: calc(100vh - 100px);
 overflow-x: hidden;
 display: grid;
-gap:2px;
 grid-template-columns: repeat(4, 1fr);
 background:linear-gradient(315deg, #485461 0%, #28313b 74%);
+@media only screen and (max-width: 600px) {
+width: 100%;
+height: calc(100vh - 100px);
+}
 ;
 `;
 export const ButtonIn = styled.input`
@@ -40,9 +48,12 @@ export const ButtonIn = styled.input`
  border-radius:30% ;
  font-size: larger;
  text-align: center;
- background-color: ${props => props.value === '='? 'blue':props.value ==='+'?'orange':props.value ==='-'?'cyan':props.value ==='x'?'red':props.value ==='Del'?'purple':'rgb(80 60 209)' };
+ background-color: ${props => props.value === '='? 'blue':props.value ==='+'?'orange':props.value ==='-'?'cyan':props.value ==='*'?'red':props.value ==='Del'?'purple':'rgb(80 60 209)' };
  :hover{
-    background-color: green;
-    transform: scale(1.1);
- }
+    background-color: #454545;
+   }
+   transform: scale(1);
+   @media screen {
+      width: calc(450px/4);
+   }
  `
