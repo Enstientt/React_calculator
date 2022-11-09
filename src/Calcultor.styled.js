@@ -13,7 +13,7 @@ background-color:lightcyan;
 overflow: hidden;
 box-shadow: 10px 10px 10px grey;
 @media screen and (max-width: 480px) {
-width: 480px;
+width: 100vw;
 margin-top:0px;
 }
 `;
@@ -25,6 +25,9 @@ position: relative;
 background: ${props=>props.color ==='nada'?'nothing':props.color};
 font-size: 60px;
 top:0px;
+@media  screen and (max-width:480px) {
+width: 100vw;
+}
 `
 
 export const Buttons = styled.div`
@@ -35,7 +38,7 @@ display: grid;
 grid-template-columns: repeat(4, 1fr);
 background:linear-gradient(315deg, #485461 0%, #28313b 74%);
 @media  screen and (max-width:480px) {
-width: 480px;
+width: 100vw;
 }
 ;
 `;
@@ -51,7 +54,7 @@ export const ButtonIn = styled.input`
    }
    transform: scale(1);
    @media screen and (max-width: 480px ) {
-      width: calc(430px/4);
-      height: calc(500px/5);
+      width: calc(90vw/4);
+      height: calc(80vh/5);
    }
  `
