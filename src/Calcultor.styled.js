@@ -27,6 +27,7 @@ font-size: 60px;
 top:0px;
 @media  screen and (max-width:480px) {
 width: 100vw;
+height: 20vh;
 }
 `
 
@@ -39,6 +40,7 @@ grid-template-columns: repeat(4, 1fr);
 background:linear-gradient(315deg, #485461 0%, #28313b 74%);
 @media  screen and (max-width:480px) {
 width: 100vw;
+height: 80vh;
 }
 ;
 `;
@@ -55,6 +57,6 @@ export const ButtonIn = styled.input`
    transform: scale(1);
    @media screen and (max-width: 480px ) {
       width: calc(90vw/4);
-      height: calc(80vh/5);
+      height: calc(70vh/5);
    }
  `
