@@ -2,7 +2,7 @@
   "name": "udemy_tutor",
   "version": "0.1.0",
   "private": true,
-  "homepage":"http://EnstienTT.github.io/React_calculaator",
+  "homepage":"http://Enstientt.github.io/React_calculator",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
