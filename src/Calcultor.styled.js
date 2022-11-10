@@ -27,7 +27,7 @@ font-size: 60px;
 top:0px;
 @media  screen and (max-width:480px) {
 width: 100vw;
-height: 20vh;
+height: 25vh;
 }
 `
 
@@ -41,7 +41,7 @@ grid-template-columns: repeat(4, 1fr);
 background:linear-gradient(315deg, #485461 0%, #28313b 74%);
 @media  screen and (max-width:480px) {
 width: 100vw;
-height: 80vh;
+height: 75vh;
 }
 ;
 `;
@@ -60,5 +60,6 @@ export const ButtonIn = styled.input`
    @media screen and (max-width: 480px ) {
       width: calc(90vw/4);
       height: calc(70vh/5);
+      ${props=>props.value == '='?'grid-column-start : 3; grid-column-end:5; width:48vw':1};
    }
  `
