@@ -27,12 +27,12 @@ class Application extends Component{
         {
           this.setState({input:this.state.input.slice(0, -1)});
         }
-        else if (input === '-/+')
+       /* else if (input === '-/+')
         {
           this.setState({input:this.state.input[0]==='-'?
                         this.state.input.replace('-', ''):
                         '-'+this.state.input});
-        }
+        }*/
         else if(input ==='%')
         {
           this.setState({input:(eval(this.state.input)/100).toString()});   
@@ -45,7 +45,7 @@ class Application extends Component{
       }
 }
 render(){
-  let values =['C', '%', '/','Del',7,8,9,'*',4,5,6,'-',1,2,3,'+',0,'.','-/+','=']; 
+  let values =['C', '%', '/','Del',7,8,9,'*',4,5,6,'-',1,2,3,'+',0,'.','=']; 
     return (
       <Container>
         <Input type={"text"} color={this.state.color}  value={this.state.input} readOnly />

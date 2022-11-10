@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 height: 100vh;
-width: 32vw;
+width: 30vw;
 position: absolute;
 margin-top:0px;
 top: 50%;
@@ -19,7 +19,7 @@ margin-top:0px;
 `;
 export const Input = styled.input`
 width: inherit;
-height: 100px;
+height: 120px;
 font-size: larger;
 position: relative;
 background: ${props=>props.color ==='nada'?'nothing':props.color};
@@ -33,7 +33,8 @@ height: 20vh;
 
 export const Buttons = styled.div`
 width: 100%;
-height: calc(100vh - 100px);
+height: calc(100vh - 120px);
+margin: 0 ;
 overflow-x: hidden;
 display: grid;
 grid-template-columns: repeat(4, 1fr);
@@ -47,12 +48,13 @@ height: 80vh;
 export const ButtonIn = styled.input`
  height: 100px;
  width: calc(28vw /4);
- border-radius:30% ;
  font-size: larger;
  text-align: center;
- background-color: ${props => props.value === '='? 'lightblue':props.value ==='+'?'orange':props.value ==='-'?'cyan':props.value ==='*'?'red':props.value ==='Del'?'purple':'rgb(80 60 209)' };
+ ${props=>props.value == '='?'grid-column-start : 3; grid-column-end:5; width:15vw':1};
+ background-color: ${props => !/[1-9]/.test(props.value)? 'lightblue':'#d3d3d3'};
+ ${props=>props.value == '='?'background-color:#fffd20;':'#d3d3d3'};
  :hover{
-    background-color: #454545;
+    background-color: #f1f1f1;
    }
    transform: scale(1);
    @media screen and (max-width: 480px ) {
