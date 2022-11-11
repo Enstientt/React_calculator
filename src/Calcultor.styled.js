@@ -75,8 +75,9 @@ export const ButtonIn = styled.button`
    }
    transform: scale(1);
    @media screen and (max-width: 480px ) {
-      width: calc(90vw/4);
-      height: calc(70vh/5);
-      ${props=>props.value == '='?'grid-column-start : 3; grid-column-end:5; width:48vw':1};
+      width: calc(99vw/4);
+      height: calc(75vh/5);
+      ${props=>props.value == '='?'grid-column-start : 3; grid-column-end:5; width:50vw':1};
+      border-radius: 5%;
    }
  `
