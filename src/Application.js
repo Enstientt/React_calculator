@@ -1,6 +1,6 @@
 import React , {Component} from 'react';
-import {Container, Input, Buttons, ButtonIn, Wrapper} from './Calcultor.styled';
 
+import {Container, Input, Buttons, ButtonIn, GlobalStyle} from './Calcultor.styled';
 class Application extends Component{
     state = {
       input:'',
@@ -40,20 +40,20 @@ class Application extends Component{
         else
       {
         this.setState({input:eval(this.state.input).toString(),
-                       color :'#454545',
-                      trigger:false});
+          color :'#454545',
+          trigger:false});
+        }
       }
-}
-render(){
-  let values =['C', '%', '/','Del',7,8,9,'*',4,5,6,'-',1,2,3,'+',0,'.','=']; 
-    return (
-      <Wrapper>
-      <Container>
-      <Input type={"text"} color={this.state.color}  value={this.state.input} readOnly />
-      <Buttons>
-      { values.map( (e)=> <ButtonIn
-        key={e}
-        onClick={this.handleClick}
+      render(){
+        let values =['C', '%', '/','Del',7,8,9,'*',4,5,6,'-',1,2,3,'+',0,'.','=']; 
+        return (
+          <Container>
+          <GlobalStyle />
+          <Input type={"text"} color={this.state.color}  value={this.state.input} readOnly />
+          <Buttons>
+          { values.map( (e)=> <ButtonIn
+            key={e}
+            onClick={this.handleClick}
         name={e}
         value={e}
         readOnly />
@@ -61,10 +61,9 @@ render(){
       }
       </Buttons>
       </Container>
-      </Wrapper>
       );
     }
-
-}
+    
+  }
 
 export default Application;

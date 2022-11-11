@@ -1,9 +1,14 @@
-import styled from 'styled-components';
+import styled, {createGlobalStyle} from 'styled-components';
 
-export const Wrapper = styled.div`
-padding: 100%;
-margin: -10px;
-background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgb(70, 252, 170) 100%);
+
+export const GlobalStyle = createGlobalStyle`
+body{
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgb(70, 252, 170) 100%);
+
+}
 `;
 export const Container = styled.div`
 height: 85vh;
