@@ -14,7 +14,7 @@ class Application extends Component{
         {
           this.setState({input: this.state.trigger?this.state.input + input.toString():input,
           float:((/[+-/x.]/.test(input))) ? true:false,
-          trigger:this.state.trigger?true:true,
+          trigger:true,
           color:'Nada'
           });
         }

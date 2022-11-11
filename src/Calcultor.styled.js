@@ -11,8 +11,8 @@ body{
 }
 `;
 export const Container = styled.div`
-height: 85vh;
-width: 26vw;
+height: 86vh;
+width: 25.7vw;
 position: absolute;
 margin-top:0px;
 top: 50%;
@@ -27,14 +27,15 @@ height: 100vh;
 }
 `;
 export const Input = styled.input`
-width: inherit;
+width:  344px;
 height: 96px;
 font-size: larger;
 position: relative;
 background-color:#c5c5c5;
-border: 10px;
+border: 1px solid black;
 font-size: 48px;
 top:0px;
+${props=>props.color !=='Nada'?'opacity: 26.5%; border:1px dashed black':1};
 @media  screen and (max-width:480px) {
 width: 100vw;
 height: 24vh;
@@ -42,13 +43,14 @@ height: 24vh;
 `
 
 export const Buttons = styled.div`
-width: 100%;
+width: 348px;
 height: calc(85vh - 96px);
 margin: 0 ;
 overflow-x: hidden;
 display: grid;
 position: relative;
 grid-template-columns: repeat(4, 1fr);
+border: 1px solid black;
 background:linear-gradient(315deg, #485461 0%, #28313b 74%);
 @media  screen and (max-width:480px) {
 width: 100vw;
@@ -62,8 +64,9 @@ export const ButtonIn = styled.input`
  font-size: larger;
  text-align: center;
  outline: none;
- opacity :0.7 ;
- ${props=>props.value == '='?'grid-column-start : 3; grid-column-end:5; width:15vw':1};
+ opacity :0.6 ;
+ cursor: pointer;
+ ${props=>props.value == '='?'grid-column-start : 3; grid-column-end:5; width:15vw;':1};
  background-color: ${props => !/[1-9]/.test(props.value)? '#8c8c8c':'#b9b9b9'};
  transition: all 0.4s ease-in-out;
  ${props=>props.value == '='?'background-color:#fffdaa;':'#d3d3d3'};
