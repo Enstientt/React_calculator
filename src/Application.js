@@ -56,7 +56,7 @@ class Application extends Component{
             onClick={this.handleClick}
         name={e}
         value={e}
-        readOnly />
+        >{e}</ButtonIn>
         )
       }
       </Buttons>

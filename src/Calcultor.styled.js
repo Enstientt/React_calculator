@@ -58,18 +58,18 @@ height: 75vh;
 }
 ;
 `;
-export const ButtonIn = styled.input`
- height: 80px;
- width: calc(24vw /4);
+export const ButtonIn = styled.button`
+ height: 85px;
+ width: calc(26vw /4);
  font-size: larger;
  text-align: center;
  outline: none;
  opacity :0.6 ;
  cursor: pointer;
  ${props=>props.value == '='?'grid-column-start : 3; grid-column-end:5; width:15vw;':1};
- background-color: ${props => !/[1-9]/.test(props.value)? '#8c8c8c':'#b9b9b9'};
+ background-color: ${props => !/[1-9]/.test(props.value)? '#8f8ffc':'#f9f9f9'};
  transition: all 0.4s ease-in-out;
- ${props=>props.value == '='?'background-color:#fffdaa;':'#d3d3d3'};
+ ${props=>props.value == '='?'background-color:#fbfdaa;':'#d3d3d3'};
  :hover{
     background-color: #c9c9f9;
    }
