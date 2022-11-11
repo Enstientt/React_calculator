@@ -1,42 +1,48 @@
 import styled from 'styled-components';
 
+export const Wrapper = styled.div`
+padding: 100%;
+margin: -10px;
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgb(70, 252, 170) 100%);
+`;
 export const Container = styled.div`
-height: 100vh;
-width: 30vw;
+height: 85vh;
+width: 26vw;
 position: absolute;
 margin-top:0px;
 top: 50%;
 left:50%;
 transform: translate(-50%,-50%);
-border: 5px;
+outline: 5px red;
 background-color:lightcyan;
 overflow: hidden;
-box-shadow: 10px 10px 10px grey;
 @media screen and (max-width: 480px) {
 width: 100vw;
-margin-top:0px;
+height: 100vh;
 }
 `;
 export const Input = styled.input`
 width: inherit;
-height: 120px;
+height: 96px;
 font-size: larger;
 position: relative;
-background: ${props=>props.color ==='nada'?'nothing':props.color};
-font-size: 60px;
+background-color:#c5c5c5;
+border: 10px;
+font-size: 48px;
 top:0px;
 @media  screen and (max-width:480px) {
 width: 100vw;
-height: 25vh;
+height: 24vh;
 }
 `
 
 export const Buttons = styled.div`
 width: 100%;
-height: calc(100vh - 120px);
+height: calc(85vh - 96px);
 margin: 0 ;
 overflow-x: hidden;
 display: grid;
+position: relative;
 grid-template-columns: repeat(4, 1fr);
 background:linear-gradient(315deg, #485461 0%, #28313b 74%);
 @media  screen and (max-width:480px) {
@@ -46,15 +52,18 @@ height: 75vh;
 ;
 `;
 export const ButtonIn = styled.input`
- height: 100px;
- width: calc(28vw /4);
+ height: 80px;
+ width: calc(24vw /4);
  font-size: larger;
  text-align: center;
+ outline: none;
+ opacity :0.7 ;
  ${props=>props.value == '='?'grid-column-start : 3; grid-column-end:5; width:15vw':1};
- background-color: ${props => !/[1-9]/.test(props.value)? 'lightblue':'#d3d3d3'};
- ${props=>props.value == '='?'background-color:#fffd20;':'#d3d3d3'};
+ background-color: ${props => !/[1-9]/.test(props.value)? '#8c8c8c':'#b9b9b9'};
+ transition: all 0.4s ease-in-out;
+ ${props=>props.value == '='?'background-color:#fffdaa;':'#d3d3d3'};
  :hover{
-    background-color: #f1f1f1;
+    background-color: #c9c9f9;
    }
    transform: scale(1);
    @media screen and (max-width: 480px ) {
